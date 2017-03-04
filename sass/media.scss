@@ -1,0 +1,156 @@
+@import "var.scss";
+
+$numberOfGrids:32;
+@function grid($size){
+  @return 100%*($size/$numberOfGrids);
+}
+
+@for $size from 1 through $numberOfGrids{//GRID NONDEVICE
+  .grid-#{$size}{
+    width: grid($size);
+  }
+  .grid-list-#{$size}{
+    li{
+      width:grid($size);
+    }
+  }
+}
+@each $display in (none,block,inline,inline-block){//DISPLAY NONDEVICE
+  .display-#{$display}{
+    display: $display;
+  }
+  .display-list-#{$display}{
+    li{
+      display: $display;
+    }
+  }
+}
+@each $float in (left,center,right,none){//FLOAT NODNEVICE
+  .float-#{$float}{
+    float: $float;
+  }
+  .float-list-#{$float}{//FLOAT LIST NONDEVICE
+    li{
+      float: $float;
+    }
+  }
+}
+@each $text in (left,center,right){//TEXT NONDEVICE
+  .text-#{$text}{
+    text-align: $text;
+  }
+  .text-list-#{$text}{
+    li{
+      text-align: $text;
+    }
+  }
+}
+
+@each $device,$maxWidth,$minWidth in (xLarge,3200px,1600px),(large,1600px,1200px),(medium,1200px,768px),(small,768px,320px),(xSmall,320px,0){
+  @media only screen and (max-width:$maxWidth) and (min-width:$minWidth){
+    @for $size from 1 through $numberOfGrids { //GRID
+      .grid-#{$size}-#{$device} {
+        width: grid($size);
+      }
+      .grid-list-#{$size}-#{$device} {
+        li {
+          width: grid($size);
+        }
+      }
+    }
+    @each $display in (none,block,inline,inline-block) {
+      .display-#{$display}-#{$device} { //DISPLAY
+        display: $display;
+      }
+      .display-list-#{$display}-#{$device} { //DISPLAY LIST
+        li {
+          display: $display;
+        }
+      }
+    }
+    @each $float in (left,right,none){//FLOAT
+      .float-#{$float}-#{$device}{
+        float: $float;
+      }
+      .float-list-#{$float}-#{$device}{ //FLOAT LIST
+        li{
+          float: $float;
+        }
+      }
+    }
+    @each $text in (left,center,right){//TEXT(align)
+      .text-#{$text}-#{$device}{
+        text-align: $text;
+      }
+      .text-list-#{$text}-#{$device}{
+        li{
+          text-align: $text;
+        }
+      }
+    }
+  }
+}
+
+@each $device,$width in (xSmall,0),(small,320px),(medium,768px),(large,1200px),(xLarge,1600px){
+  @media only screen and (min-width:$width){
+    @for $size from 1 through $numberOfGrids{//GRID
+      .fgrid-#{$size}-#{$device} {
+        width: grid($size);
+      }
+      .fgrid-list-#{$size}-#{$device} {
+        li {
+          width: grid($size);
+        }
+      }
+    }
+    @each $display in (none,block,inline,inline-block){
+      .fdisplay-#{$display}-#{$device}{//DISPLAY
+        display: $display;
+      }
+      .fdisplay-list-#{$display}-#{$device}{//DISPLAY LIST
+        li{
+          display: $display;
+        }
+      }
+    }
+    @each $float in (left,right,none){//FLOAT
+      .ffloat-#{$float}-#{$device}{
+        float: $float;
+      }
+      .ffloat-list-#{$float}-#{$device}{//FLOAT LIST
+        float: $float;
+      }
+    }
+    @each $text in (left,center,right){//TEXT(align)
+      .ftext-#{$text}-#{$device}{
+        text-align: $text;
+      }
+      .text-list-#{$text}-#{$device}{//TEXT LIST (align)
+        li{
+          text-align: $text;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width:768px) {
+  .menu{
+    .list{
+      .listItem{
+        &:hover .subList{
+          transition:$transition;
+          position: static !important;
+          left: 0 !important;
+        }
+        &:hover .subListItem{
+          transition:$transition;
+          width:calc(100% - #{$margin}*2);
+          overflow: hidden;
+          display: block !important;
+        }
+      }
+    }
+  }
+}

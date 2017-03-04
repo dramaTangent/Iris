@@ -1,0 +1,23 @@
+.auto, .background {
+  top: 0;
+  right: 0;
+  bottom: 0p;
+  left: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: auto;
+  margin-top: auto; }
+
+.background {
+  position: fixed;
+  z-index: -1; }
+  .background .images {
+    overflow: hidden;
+    width: 100%;
+    min-height: 100vh; }
+    .background .images img {
+      width: inherit;
+      min-height: inherit;
+      float: left; }
+
+/*# sourceMappingURL=background.css.map */

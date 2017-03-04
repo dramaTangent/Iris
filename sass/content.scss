@@ -1,0 +1,275 @@
+@import "var.scss";
+
+.content{
+  background-attachment: fixed;
+  background-size: 20px 20px;
+  background-color:rgba($night,0.2);
+  background-position: center center;
+  background-image:url("../images/raster.png");
+  $contentMinHeight:calc(100vh - 5*#{$margin});
+  min-height:$contentMinHeight;
+  overflow: hidden;
+  padding:$margin;
+  padding-top:4*$margin;
+  font-family: 'Francois One',sans-serif;
+  .leftSide{
+    .logo{
+      box-shadow:inset 0 0 97px 5px rgba($night,0.2);
+      a{
+        padding:$margin;
+        padding-top:4*$margin;
+        display: block;
+      }
+    }
+    .menu{
+      cursor: default;
+      margin-top: $margin;
+      .list{
+        .listItem{
+          position: relative;
+          .item{
+            background-color:rgba(lighten($night,15%),$opacity);
+            margin-bottom:$margin/2;
+            box-shadow: 0 0 97px 5px rgba($night,0.2);
+            overflow: hidden;
+            .arrow{
+              color: $day;
+              padding:$margin;
+            }
+            .name{
+              padding:$margin;
+              color: $day;
+              p{
+                padding:$margin/6;
+                &:first-child{
+                  font-weight:$strong;
+                }
+                &:last-child{
+                  color:darken($day,10%);
+                }
+              }
+            }
+            &:hover{
+              transition:$transition;
+              background-color:$day;
+            }
+            &:hover .arrow{
+              transition:$transition;
+              color: lighten($night, 10%);
+            }
+            &:hover .name {
+              transition: $transition;
+              color: lighten($night, 10%);
+              p{
+                transition:$transition;
+                &:last-child {
+                  color: lighten($night, 40%);
+                }
+              }
+            }
+            &:hover .subList .subListItem{
+              display: block;
+            }
+            &:hover .subList{
+              transition:$transition;
+              opacity:1;
+            }
+          }
+          .subList{
+            position: absolute;
+            top:0;
+            left:100%;
+            padding-left:$margin;
+            width: 100%;
+            opacity:0;
+            z-index:99;
+            .subListItem{
+              display: none;
+              .item{
+                .name{
+                  padding:$margin;
+                  color: $day;
+                  p{
+                    padding:$margin/6;
+                    &:first-child{
+                      font-weight:$strong;
+                    }
+                    &:last-child{
+                      color:darken($day,10%);
+                    }
+                  }
+                }
+                &:hover .name {
+                  transition: $transition;
+                  color: lighten($night, 10%);
+                  p{
+                    transition:$transition;
+                    &:last-child {
+                      color: lighten($night, 40%);
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+        .active{
+          .item{
+            background-color:$day;
+            .arrow{
+              color: lighten($night, 10%);
+            }
+            .name{
+              color: lighten($night, 10%) !important;
+              p{
+                &:last-child{
+                  color: lighten($night, 40%) !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .rightSide{
+    min-height:$contentMinHeight;
+    .pages{
+      overflow: hidden;
+      background-color:rgba(lighten($night,10%),$opacity);
+      .list{
+        .listItem{
+          .item{
+            padding:$margin;
+            overflow: hidden;
+            .title{
+              border-bottom:1px solid rgba($day,0.1);
+              .header{
+                overflow: hidden;
+              }
+            }
+            .description{
+              font-weight: $thin;
+              font-family:arial;
+              color:darken($day,10%);
+
+              p{
+                margin:$margin;
+              }
+            }
+          }
+        }
+      }
+      .page-contact{
+        .list{
+          .listItem{
+              .map{
+              line-height:0;
+              padding:$margin;
+              iframe{
+                width:100%;
+                min-height:250px;
+              }
+            }
+            .item{
+              padding:$margin;
+              overflow: hidden;
+              .title{
+                border-bottom:1px solid rgba($day,0.1);
+                .header{
+                  overflow: hidden;
+                }
+              }
+              .description{
+                font-weight: $thin;
+                font-family:arial;
+                color:darken($day,10%);
+
+                p{
+                  margin:$margin;
+                }
+              }
+              .form{
+                form{
+                  margin:$margin;
+                  .textBox{
+                    border:0;
+                    width:calc(100% - #{$margin}*2);
+                    background-color:rgba(darken($night,15%),0.8);
+                    display: block;
+                    padding:$margin;
+                    margin-bottom:$margin/2;
+                    color: $day;
+                  }
+                  textarea{
+                    @extend .textBox;
+                    resize: none;
+                    min-height:100px;
+                  }
+                }
+                .button-group{
+                  overflow: hidden;
+                }
+              }
+            }
+          }
+        }
+      }
+      .page-about{
+        .list{
+          .listItem{
+            .item{
+              .description{
+                .image{
+                  line-height:0;
+                  position: relative;
+                  display: block;
+                  &:hover img{
+                    transition:$transition;
+                    filter:grayscale(0);
+                  }
+                  &:hover .imageCover{
+                    transition:$transition;
+                    background-color:rgba(lighten($night,10%),0.1);
+                  }
+                  img{
+                    width: 100%;
+                    height:100%;
+                    filter: grayscale(100%)
+                  }
+                  .imageCover{
+                    position: absolute;
+                    z-index:1;
+                    left:0;
+                    bottom:0;
+                    right:0;
+                    top:0;
+                    margin-top:auto;
+                    margin-bottom:auto;
+                    margin-left:auto;
+                    margin-right:auto;
+                    background-color:rgba(lighten($night,10%),0.4);
+                  }
+                }
+              }
+              .imagesList{
+                overflow: hidden;
+                width:100%;
+                .arrow{
+                  display: inline-block;
+                  margin: $margin/2;
+                  margin-bottom:0;
+                  margin-top:0;
+                  &:hover{
+                    transition:$transition;
+                    color:darken($day,10%);
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

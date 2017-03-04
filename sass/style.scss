@@ -1,0 +1,46 @@
+@import "var.scss";
+//@import "extends.scss";
+
+
+body{
+  margin:0;
+  padding: 0;
+  line-height: $lineHeight;
+  color: $night;
+  font-family:arial;
+  font{
+    size:$normalSize;
+    weight:$thin;
+  }
+  ul{
+    list-style:none;
+    margin: 0;
+    padding:0;
+  }
+  a{
+    text-decoration: none !important;
+    color: inherit;
+  }
+  button{
+    //@extend .button-sky;
+  }
+  .fa{
+    cursor: default;
+  }
+  p{
+    margin: 0;
+    padding: 0;
+  }
+  @for $i from 1 through 6{
+    h#{$i}{
+      margin: 0;
+      padding: 0;
+      font-size:$maxFontSize/$i;
+      font-weight:inherit;
+    }
+  }
+  .container{
+    width:80%;
+    margin: 0 auto;
+  }
+}

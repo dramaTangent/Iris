@@ -1,0 +1,182 @@
+.content {
+  background-attachment: fixed;
+  background-size: 20px 20px;
+  background-color: rgba(0, 0, 0, 0.2);
+  background-position: center center;
+  background-image: url("../images/raster.png");
+  min-height: calc(100vh - 5*10px);
+  overflow: hidden;
+  padding: 10px;
+  padding-top: 40px;
+  font-family: 'Francois One',sans-serif; }
+  .content .leftSide .logo {
+    box-shadow: inset 0 0 97px 5px rgba(0, 0, 0, 0.2); }
+    .content .leftSide .logo a {
+      padding: 10px;
+      padding-top: 40px;
+      display: block; }
+  .content .leftSide .menu {
+    cursor: default;
+    margin-top: 10px; }
+    .content .leftSide .menu .list .listItem {
+      position: relative; }
+      .content .leftSide .menu .list .listItem .item {
+        background-color: rgba(38, 38, 38, 0.85);
+        margin-bottom: 5px;
+        box-shadow: 0 0 97px 5px rgba(0, 0, 0, 0.2);
+        overflow: hidden; }
+        .content .leftSide .menu .list .listItem .item .arrow {
+          color: #EAEAEA;
+          padding: 10px; }
+        .content .leftSide .menu .list .listItem .item .name {
+          padding: 10px;
+          color: #EAEAEA; }
+          .content .leftSide .menu .list .listItem .item .name p {
+            padding: 1.66667px; }
+            .content .leftSide .menu .list .listItem .item .name p:first-child {
+              font-weight: 600; }
+            .content .leftSide .menu .list .listItem .item .name p:last-child {
+              color: #d1d1d1; }
+        .content .leftSide .menu .list .listItem .item:hover {
+          transition: 0.5s;
+          background-color: #EAEAEA; }
+        .content .leftSide .menu .list .listItem .item:hover .arrow {
+          transition: 0.5s;
+          color: #1a1a1a; }
+        .content .leftSide .menu .list .listItem .item:hover .name {
+          transition: 0.5s;
+          color: #1a1a1a; }
+          .content .leftSide .menu .list .listItem .item:hover .name p {
+            transition: 0.5s; }
+            .content .leftSide .menu .list .listItem .item:hover .name p:last-child {
+              color: #666666; }
+        .content .leftSide .menu .list .listItem .item:hover .subList .subListItem {
+          display: block; }
+        .content .leftSide .menu .list .listItem .item:hover .subList {
+          transition: 0.5s;
+          opacity: 1; }
+      .content .leftSide .menu .list .listItem .subList {
+        position: absolute;
+        top: 0;
+        left: 100%;
+        padding-left: 10px;
+        width: 100%;
+        opacity: 0;
+        z-index: 99; }
+        .content .leftSide .menu .list .listItem .subList .subListItem {
+          display: none; }
+          .content .leftSide .menu .list .listItem .subList .subListItem .item .name {
+            padding: 10px;
+            color: #EAEAEA; }
+            .content .leftSide .menu .list .listItem .subList .subListItem .item .name p {
+              padding: 1.66667px; }
+              .content .leftSide .menu .list .listItem .subList .subListItem .item .name p:first-child {
+                font-weight: 600; }
+              .content .leftSide .menu .list .listItem .subList .subListItem .item .name p:last-child {
+                color: #d1d1d1; }
+          .content .leftSide .menu .list .listItem .subList .subListItem .item:hover .name {
+            transition: 0.5s;
+            color: #1a1a1a; }
+            .content .leftSide .menu .list .listItem .subList .subListItem .item:hover .name p {
+              transition: 0.5s; }
+              .content .leftSide .menu .list .listItem .subList .subListItem .item:hover .name p:last-child {
+                color: #666666; }
+    .content .leftSide .menu .list .active .item {
+      background-color: #EAEAEA; }
+      .content .leftSide .menu .list .active .item .arrow {
+        color: #1a1a1a; }
+      .content .leftSide .menu .list .active .item .name {
+        color: #1a1a1a !important; }
+        .content .leftSide .menu .list .active .item .name p:last-child {
+          color: #666666 !important; }
+  .content .rightSide {
+    min-height: calc(100vh - 5*10px); }
+    .content .rightSide .pages {
+      overflow: hidden;
+      background-color: rgba(26, 26, 26, 0.85); }
+      .content .rightSide .pages .list .listItem .item {
+        padding: 10px;
+        overflow: hidden; }
+        .content .rightSide .pages .list .listItem .item .title {
+          border-bottom: 1px solid rgba(234, 234, 234, 0.1); }
+          .content .rightSide .pages .list .listItem .item .title .header {
+            overflow: hidden; }
+        .content .rightSide .pages .list .listItem .item .description {
+          font-weight: 300;
+          font-family: arial;
+          color: #d1d1d1; }
+          .content .rightSide .pages .list .listItem .item .description p {
+            margin: 10px; }
+      .content .rightSide .pages .page-contact .list .listItem .map {
+        line-height: 0;
+        padding: 10px; }
+        .content .rightSide .pages .page-contact .list .listItem .map iframe {
+          width: 100%;
+          min-height: 250px; }
+      .content .rightSide .pages .page-contact .list .listItem .item {
+        padding: 10px;
+        overflow: hidden; }
+        .content .rightSide .pages .page-contact .list .listItem .item .title {
+          border-bottom: 1px solid rgba(234, 234, 234, 0.1); }
+          .content .rightSide .pages .page-contact .list .listItem .item .title .header {
+            overflow: hidden; }
+        .content .rightSide .pages .page-contact .list .listItem .item .description {
+          font-weight: 300;
+          font-family: arial;
+          color: #d1d1d1; }
+          .content .rightSide .pages .page-contact .list .listItem .item .description p {
+            margin: 10px; }
+        .content .rightSide .pages .page-contact .list .listItem .item .form form {
+          margin: 10px; }
+          .content .rightSide .pages .page-contact .list .listItem .item .form form .textBox, .content .rightSide .pages .page-contact .list .listItem .item .form form textarea {
+            border: 0;
+            width: calc(100% - 10px*2);
+            background-color: rgba(0, 0, 0, 0.8);
+            display: block;
+            padding: 10px;
+            margin-bottom: 5px;
+            color: #EAEAEA; }
+          .content .rightSide .pages .page-contact .list .listItem .item .form form textarea {
+            resize: none;
+            min-height: 100px; }
+        .content .rightSide .pages .page-contact .list .listItem .item .form .button-group {
+          overflow: hidden; }
+      .content .rightSide .pages .page-about .list .listItem .item .description .image {
+        line-height: 0;
+        position: relative;
+        display: block; }
+        .content .rightSide .pages .page-about .list .listItem .item .description .image:hover img {
+          transition: 0.5s;
+          filter: grayscale(0); }
+        .content .rightSide .pages .page-about .list .listItem .item .description .image:hover .imageCover {
+          transition: 0.5s;
+          background-color: rgba(26, 26, 26, 0.1); }
+        .content .rightSide .pages .page-about .list .listItem .item .description .image img {
+          width: 100%;
+          height: 100%;
+          filter: grayscale(100%); }
+        .content .rightSide .pages .page-about .list .listItem .item .description .image .imageCover {
+          position: absolute;
+          z-index: 1;
+          left: 0;
+          bottom: 0;
+          right: 0;
+          top: 0;
+          margin-top: auto;
+          margin-bottom: auto;
+          margin-left: auto;
+          margin-right: auto;
+          background-color: rgba(26, 26, 26, 0.4); }
+      .content .rightSide .pages .page-about .list .listItem .item .imagesList {
+        overflow: hidden;
+        width: 100%; }
+        .content .rightSide .pages .page-about .list .listItem .item .imagesList .arrow {
+          display: inline-block;
+          margin: 5px;
+          margin-bottom: 0;
+          margin-top: 0; }
+          .content .rightSide .pages .page-about .list .listItem .item .imagesList .arrow:hover {
+            transition: 0.5s;
+            color: #d1d1d1; }
+
+/*# sourceMappingURL=content.css.map */

@@ -1,0 +1,136 @@
+@import "var.scss";
+
+.transition{
+  -webkit-transition: $transition;
+  -moz-transition: $transition;
+  -ms-transition: $transition;
+  -o-transition: $transition;
+  transition: $transition;
+}
+.button{
+  -webkit-border-radius:$radius;
+  -moz-border-radius:$radius;
+  border-radius:$radius;
+  text-align:center;
+  border:0;
+  padding:$margin;
+  font-size:inherit;
+  color: $day;
+  a{
+    display: block;
+  }
+  &:disabled{
+    opacity: $opacity
+  }
+}
+.button-group{
+  display: flex;
+  button,.button{
+    border-right:1px solid rgba($night,0.1);
+    @extend .button;
+    border-radius:0;
+    &:first-child{
+      border-top-left-radius:$radius;
+      border-bottom-left-radius:$radius;
+    }
+    &:last-child{
+      border-top-right-radius:$radius;
+      border-bottom-right-radius:$radius;
+      border-right:0;
+    }
+  }
+  &-column{
+    @extend .button-group;
+    flex-direction:column;
+    button, .button{
+      border:0;
+      border-bottom:1px solid rgba($night,0.1);
+      &:first-child{
+        border-top-left-radius:$radius;
+        border-top-right-radius:$radius;
+        border-bottom-left-radius:0;
+      }
+      &:last-child{
+        border-bottom-left-radius:$radius;
+        border-bottom-right-radius:$radius;
+        border-top-right-radius:0;
+        border:0;
+      }
+    }
+  }
+}
+@each $name,$style in ("transparent",transparent),(day,$day),(night,$night),(fire,$fire),(sky,$sky),(earth,$earth){
+  .text-#{$name}{ //TEXT COLORS
+    color: $style;
+  }
+  .bg-#{$name}{
+    background-color: $style;
+  }
+  .border-#{$name}{
+    border:1px solid $style;
+    @for $borderSize from 1 through 10{
+      &-#{$borderSize}{
+        border:$borderSize+px solid $style;
+      }
+    }
+  }
+  .button-#{$name}{
+    @extend .button;
+    background-color: $style;
+    @if $name == transparent or $name == day{
+      color: $night;
+    }
+    &-inverse{
+      @extend .button;
+      background-color: $style;
+      @if $name == transparent or $name == day{
+        color: $night;
+      }
+      &:hover {
+        @extend .transition;
+        background-color: lighten($style,10%);
+      }
+    }
+    &:hover{
+      @extend .transition;
+      background-color: darken($style,10%);
+    }
+  }
+  .button-group-#{$name}{
+    @extend .button-group;
+    button,.button{
+      @extend .button-#{$name};
+    }
+    &-inverse{
+      @extend .button-group;
+      button,.button{
+        @extend .button-#{$name}-inverse;
+      }
+    }
+  }
+  .hover{
+    &-text-#{$name}{
+      @extend .transition;
+      &:hover{
+        color: $style;
+      }
+    }
+    &-bg-#{$name}{
+      @extend .transition;
+      &:hover{
+        background-color: $style;
+      }
+    }
+    &-border-#{$name}{
+      @extend .transition;
+      border:1px solid $style;
+      @for $borderSize from 1 through 10{
+        &-#{$borderSize}{
+          &:hover{
+            border:$borderSize+px solid $style;
+          }
+        }
+      }
+    }
+  }
+}
