@@ -1,21 +1,14 @@
-@keyframes activeBg {
-  0% {
-    background-position: 0 0; }
-  25% {
-    background-position: -20vw 20vw; } }
 .content {
   background-attachment: fixed;
   background-size: 30px 30px;
   background-color: rgba(0, 0, 0, 0.2);
   background-image: url("../images/raster.png");
   min-height: calc(100vh - 5*10px);
+  background-position: center center;
   overflow: hidden;
   padding: 10px;
   padding-top: 40px;
-  font-family: 'Francois One',sans-serif;
-  animation-name: activefBg;
-  animation-duration: 60s;
-  animation-iteration-count: infinite; }
+  font-family: 'Francois One',sans-serif; }
   .content .leftSide .logo {
     box-shadow: inset 0 0 97px 5px rgba(0, 0, 0, 0.2); }
     .content .leftSide .logo a {
@@ -62,6 +55,8 @@
         .content .leftSide .menu .list .listItem .item:hover .subList, .content .leftSide .menu .list .listItem .subList .subListItem .subItem:hover .subList {
           transition: 0.5s;
           opacity: 1; }
+        .content .leftSide .menu .list .listItem .item .m, .content .leftSide .menu .list .listItem .subList .subListItem .subItem .m {
+          overflow: hidden !important; }
       .content .leftSide .menu .list .listItem .subList, .content .leftSide .menu .list .listItem .subList .subListItem .subList {
         position: absolute;
         top: 0;
@@ -91,13 +86,13 @@
               transition: 0.5s; }
               .content .leftSide .menu .list .listItem .subList .subListItem .subItem:hover .name p:last-child {
                 color: #666666; }
-    .content .leftSide .menu .list .active .item, .content .leftSide .menu .list .active .listItem .subList .subListItem .subItem, .content .leftSide .menu .list .listItem .subList .subListItem .active .subItem {
-      background-color: #EAEAEA; }
-      .content .leftSide .menu .list .active .item .arrow, .content .leftSide .menu .list .active .listItem .subList .subListItem .subItem .arrow, .content .leftSide .menu .list .listItem .subList .subListItem .active .subItem .arrow {
+    .content .leftSide .menu .list .active {
+      background-color: #EAEAEA !important; }
+      .content .leftSide .menu .list .active .arrow {
         color: #1a1a1a; }
-      .content .leftSide .menu .list .active .item .name, .content .leftSide .menu .list .active .listItem .subList .subListItem .subItem .name, .content .leftSide .menu .list .listItem .subList .subListItem .active .subItem .name {
+      .content .leftSide .menu .list .active .name {
         color: #1a1a1a !important; }
-        .content .leftSide .menu .list .active .item .name p:last-child, .content .leftSide .menu .list .active .listItem .subList .subListItem .subItem .name p:last-child, .content .leftSide .menu .list .listItem .subList .subListItem .active .subItem .name p:last-child {
+        .content .leftSide .menu .list .active .name p:last-child {
           color: #666666 !important; }
   .content .rightSide {
     min-height: calc(100vh - 5*10px); }

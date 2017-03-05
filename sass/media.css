@@ -508,7 +508,7 @@
 
   .text-list-right-xLarge li {
     text-align: right; } }
-@media only screen and (max-width: 1600px) and (min-width: 1200px) {
+@media only screen and (max-width: 4600px) and (min-width: 1200px) {
   .grid-1-large {
     width: 3.125%; }
 

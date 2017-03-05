@@ -46,7 +46,7 @@ $numberOfGrids:32;
   }
 }
 
-@each $device,$maxWidth,$minWidth in (xLarge,3200px,1600px),(large,1600px,1200px),(medium,1200px,768px),(small,768px,320px),(xSmall,320px,0){
+@each $device,$maxWidth,$minWidth in (xLarge,3200px,1600px),(large,4600px,1200px),(medium,1200px,768px),(small,768px,320px),(xSmall,320px,0){
   @media only screen and (max-width:$maxWidth) and (min-width:$minWidth){
     @for $size from 1 through $numberOfGrids { //GRID
       .grid-#{$size}-#{$device} {

@@ -11,6 +11,9 @@
         <div class="page-contact display-none" id="page-contact">
             <?php include('./elements/contact.php'); ?>
         </div>
+        <div class="page-about display-none" id="page-about">
+            <div class="bg-fire text-day">PAGE ABOUT</div>
+        </div>
         <div class="page-about display-none" id="page-about-company">
             <?php include('./elements/about-company.php'); ?>
         </div>
