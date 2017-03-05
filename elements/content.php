@@ -5,7 +5,7 @@
 
 <div  class="rightSide float-right-large float-right-medium grid-22-large grid-15-medium ">
     <div class="pages" id="pages">
-        <div class="page-home display-none" id="page-home">
+        <div class="page-home" id="page-home">
             <?php include('./elements/home.php'); ?>
         </div>
         <div class="page-contact display-none" id="page-contact">
@@ -20,7 +20,7 @@
         <div class="page-about display-none" id="page-about-clients">
             <?php include('./elements/about-clients.php'); ?>
         </div>
-        <div class="page-gallery" id="page-gallery-wop">
+        <div class="page-gallery display-none" id="page-gallery-wop">
             <?php include('./elements/gallery-wop.php'); ?>
         </div>
     </div>

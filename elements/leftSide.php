@@ -23,7 +23,7 @@
                     <p><i><small>DISCOVER MORE</small></i></p>
                 </span>
                 <ul class="subList">
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="item">
                             <span class="text-left float-left name">
                                 <p><h3>Working on a project</h3></p>
@@ -52,7 +52,7 @@
                     <p><i><small>OUR WORK</small></i></p>
                 </span>
                 <ul class="subList">
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="item">
                             <span class="text-left float-left name">
                                 <p><h3>Recent projects</h3></p>
@@ -60,7 +60,7 @@
                             </span>
                         </div>
                     </li>
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="item">
                             <span class="text-left float-left name">
                                 <p><h3>Creative group</h3></p>
@@ -68,7 +68,7 @@
                             </span>
                         </div>
                     </li>
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="item">
                             <span class="text-left float-left name">
                                 <p><h3>Products</h3></p>
@@ -76,7 +76,7 @@
                             </span>
                         </div>
                     </li>
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="item">
                             <span class="text-left float-left name">
                                 <p><h3>Video-clips</h3></p>
@@ -97,7 +97,7 @@
                     <p><i><small>MEET US</small></i></p>
                 </span>
                 <ul class="subList">
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="item" id="menu-about-group">
                             <span class="text-left float-left name">
                                 <p><h3>CREATIVE GROUP</h3></p>
@@ -105,7 +105,7 @@
                             </span>
                         </div>
                     </li>
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="item" id="menu-about-company">
                             <span class="text-left float-left name">
                                 <p><h3>OUR COMPANY</h3></p>
@@ -113,7 +113,7 @@
                             </span>
                         </div>
                     </li>
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="item">
                             <span class="text-left float-left name">
                                 <p><h3>CLIENTS</h3></p>
