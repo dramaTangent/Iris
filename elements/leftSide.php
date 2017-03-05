@@ -31,7 +31,7 @@
                             </span>
                         </div>
                     </li>
-                    <li class="subListItem listItem">
+                    <li class="subListItem ">
                         <div class="subItem">
                             <span class="text-left float-left name">
                                 <p><h3>Memories</h3></p>
