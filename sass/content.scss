@@ -97,7 +97,8 @@
             .subListItem{
               display: none;
               @extend .listItem;
-              .item{
+              .subItem{
+                @extend .item;
                 .name{
                   padding:$margin;
                   color: $day;
