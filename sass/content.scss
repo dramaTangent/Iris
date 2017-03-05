@@ -136,9 +136,9 @@
     min-height:$contentMinHeight;
     .pages{
       overflow: hidden;
-      background-color:rgba(lighten($night,10%),$opacity);
       .list{
         .listItem{
+          background-color:rgba(lighten($night,10%),$opacity);
           .item{
             padding:$margin;
             overflow: hidden;
@@ -265,6 +265,35 @@
                     color:darken($day,10%);
                   }
                 }
+              }
+            }
+          }
+        }
+        .clientList{
+          .listItem{
+            margin-top:$margin;
+          }
+          img{
+            max-height:400px;
+          }
+          flex-flow: row wrap;
+          display: flex;
+          flex-direction:row;
+          justify-content:space-between;
+        }
+      }
+      .page-home{
+        .socials{
+          .description{
+            .listItem{
+              line-height:0;
+              border:5px solid transparent;
+              &:hover{
+                transition:$transition;
+                border-color:$fire;
+              }
+              img{
+                width:100%;
               }
             }
           }

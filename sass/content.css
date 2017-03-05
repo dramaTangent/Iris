@@ -92,21 +92,22 @@
   .content .rightSide {
     min-height: calc(100vh - 5*10px); }
     .content .rightSide .pages {
-      overflow: hidden;
-      background-color: rgba(26, 26, 26, 0.85); }
-      .content .rightSide .pages .list .listItem .item {
-        padding: 10px;
-        overflow: hidden; }
-        .content .rightSide .pages .list .listItem .item .title {
-          border-bottom: 1px solid rgba(234, 234, 234, 0.1); }
-          .content .rightSide .pages .list .listItem .item .title .header {
-            overflow: hidden; }
-        .content .rightSide .pages .list .listItem .item .description {
-          font-weight: 300;
-          font-family: arial;
-          color: #d1d1d1; }
-          .content .rightSide .pages .list .listItem .item .description p {
-            margin: 10px; }
+      overflow: hidden; }
+      .content .rightSide .pages .list .listItem {
+        background-color: rgba(26, 26, 26, 0.85); }
+        .content .rightSide .pages .list .listItem .item {
+          padding: 10px;
+          overflow: hidden; }
+          .content .rightSide .pages .list .listItem .item .title {
+            border-bottom: 1px solid rgba(234, 234, 234, 0.1); }
+            .content .rightSide .pages .list .listItem .item .title .header {
+              overflow: hidden; }
+          .content .rightSide .pages .list .listItem .item .description {
+            font-weight: 300;
+            font-family: arial;
+            color: #d1d1d1; }
+            .content .rightSide .pages .list .listItem .item .description p {
+              margin: 10px; }
       .content .rightSide .pages .page-contact .list .listItem .map {
         line-height: 0;
         padding: 10px; }
@@ -178,5 +179,22 @@
           .content .rightSide .pages .page-about .list .listItem .item .imagesList .arrow:hover {
             transition: 0.5s;
             color: #d1d1d1; }
+      .content .rightSide .pages .page-about .clientList {
+        flex-flow: row wrap;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between; }
+        .content .rightSide .pages .page-about .clientList .listItem {
+          margin-top: 10px; }
+        .content .rightSide .pages .page-about .clientList img {
+          max-height: 400px; }
+      .content .rightSide .pages .page-home .socials .description .listItem {
+        line-height: 0;
+        border: 5px solid transparent; }
+        .content .rightSide .pages .page-home .socials .description .listItem:hover {
+          transition: 0.5s;
+          border-color: #F04416; }
+        .content .rightSide .pages .page-home .socials .description .listItem img {
+          width: 100%; }
 
 /*# sourceMappingURL=content.css.map */
